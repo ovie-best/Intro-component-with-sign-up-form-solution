@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <main>
+    <section class="welcome_msg">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </p>
+    </section>
+    <section class="form">
+      <h2><strong>Try it free 7 days</strong> then $20/mo. thereafter</h2>
+      <form action="">
+        <div>
+          <input type="text" name="first_name" id="first_name" placeholder="First Name">
+          <img src="./images/icon-error.svg" alt="" class="hide first_name_error" aria-hidden="true">
+          <span class="erro_msg hide first_name_error_msg"></span>
+        </div>
+        <div>
+          <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+          <img src="./images/icon-error.svg" alt="" class="hide last_name_error " aria-hidden="true">
+          <span class="erro_msg hide last_name_error_msg"></span>
+        </div>
+        <div>
+          <input type="email" name="email" id="email" placeholder="Email Address">
+          <img src="./images/icon-error.svg" alt="" class="hide email_error" aria-hidden="true">
+          <span class="erro_msg hide email_error_msg"></span>
+        </div>
+        <div>
+          <input type="password" name="password" id="password" placeholder="Password">
+          <img src="./images/icon-error.svg" alt="" class="hide password_error" aria-hidden="true">
+          <span class="erro_msg hide password_error_msg"></span>
+        </div>
+        <input type="submit" value="Claim your free trial">
+        <p>By clicking the button, you are agreeing to our <strong> Terms and Service</strong></p>
+      </form>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

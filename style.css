@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-size: 100%;
+}
+ 
+html, body {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*I dont want to use this for this particular project, that's why it's commented out*/
+/* p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+} */
+
+/*this should be used only when working with a javascript framework like REACT or Next.Js*/
+/* #root, #__next {
+    isolation: isolate;
+} */
+
+/*My styling starts here*/
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Red);
+    background-image: url(./images/bg-intro-desktop.png);
+
+    padding: 100px 0px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 77%;
+}
+
+.welcome_msg, .form {
+    width: 50%;
+}
+
+h1, p, .form strong, input[type="submit"] {
+    color: #fff;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.form h2 {
+    padding: 25px;
+    padding-bottom: 17px;
+    border-radius: 10px;
+    background-color: var(--Blue);
+    text-align: center;
+    box-shadow: 0px 7px 0px 0px hsla(249, 10%, 26%, 0.2);
+    margin-bottom: 23px;
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+}
+
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 0px 0px hsla(249, 10%, 26%, 0.2);
+    
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 6px;
+    border: 1px solid var(--Grayish-Blue);
+}
+
+input[type="submit"] {
+    background-color: var(--Green);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+   background-color:  hsla(154, 59%, 51%, 0.8);
+}
+
+.form form p {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+    margin-top: 8px;
+}
+
+.form form p strong {
+    color: var(--Red);
+    font-weight: 700;
+}
+
+.error {
+    border: 2px solid var(--Red);
+}
+
+form div {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+img[src="./images/icon-error.svg"] {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.erro_msg {
+    color: var(--Red);
+    font-size: 14px;
+    font-weight: 600;
+    font-style: oblique;
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+@media screen and (max-width: 1320px) {
+    main {
+        width: 90%;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    main {
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome_msg, .form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 92%;
+    }
+    .welcome_msg, .form {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    input {
+        padding-left: 20px;
+    }
+
+    input::placeholder {
+        font-weight: 700;
+    }
+
+    .welcome_msg p {
+        margin-bottom: 50px;
+    }
+}
